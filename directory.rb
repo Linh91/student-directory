@@ -13,14 +13,26 @@ students = [
   "Joffrey Baratheon",
   "Norman Bates"
 ]
-# and then print them
-puts "The students of Villains Academy"
-puts "-------------"
-students.each do |student|
-  puts student
+
+def print_header
+  puts "The students of Villains Academy"
+  puts "-------------"
 end
-# Operation on every value of an array using iteration
-# name will be assigned to the value student
-# now we print the total
-print "Overall, we have #{student.count} great students"
-# did it print?
+
+def print(names)
+  names.each do |name|
+    puts name
+  end
+end
+
+def print_footer(names)
+  puts "Overall, we have #{names.count} great students"
+end
+# nothing happens until we call the methods
+print_header
+print(students)
+print_footer(students)
+# the student variable is now passed to the
+# method as an argument (name)
+# this is because methods don't have access to
+# local variables defined outside them
